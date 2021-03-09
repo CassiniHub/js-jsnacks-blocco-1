@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/placeholder.css">
+</head>
+<body>
+    
+    <script>
+
+        //ES #1
+        // Generatore di "nomi cognomi" casuali: prendendo una 
+        // lista di nomi e una lista di cognomi, Gatsby vuole 
+        // generare una falsa lista di invitati.
+
+        var names = ['Alfonso', 'Mario', 'Luca', 'Paolo'];
+        var lastnames = ['Amato', 'Rapisarda', 'Scarpaci', 'Aragonese'];  
+
+        var nameLng = names.length;
+        var lastnameLng = lastnames.length;
+
+        var fullnames = [];
+
+        for (var i = 0; i < 5; i++) {
+
+            var nameRnd = names[Math.floor(Math.random() * nameLng)];
+            var lastnameRnd = lastnames[Math.floor(Math.random() * lastnameLng)];
+            fullnames.push(nameRnd + ' ' + lastnameRnd);
+        }
+
+        console.log(fullnames);
+    </script>
+</body>
+</html>
