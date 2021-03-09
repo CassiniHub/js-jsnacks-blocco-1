@@ -17,22 +17,62 @@
         // lista di nomi e una lista di cognomi, Gatsby vuole 
         // generare una falsa lista di invitati.
 
-        var names = ['Alfonso', 'Mario', 'Luca', 'Paolo'];
-        var lastnames = ['Amato', 'Rapisarda', 'Scarpaci', 'Aragonese'];  
+        // var names = ['Alfonso', 'Mario', 'Luca', 'Paolo'];
+        // var lastnames = ['Amato', 'Rapisarda', 'Scarpaci', 'Aragonese'];  
 
-        var nameLng = names.length;
-        var lastnameLng = lastnames.length;
+        // var nameLng = names.length;
+        // var lastnameLng = lastnames.length;
 
-        var fullnames = [];
+        // var fullnames = [];
 
-        for (var i = 0; i < 5; i++) {
+        // for (var i = 0; i < 5; i++) {
 
-            var nameRnd = names[Math.floor(Math.random() * nameLng)];
-            var lastnameRnd = lastnames[Math.floor(Math.random() * lastnameLng)];
-            fullnames.push(nameRnd + ' ' + lastnameRnd);
+        //     var nameRnd = names[Math.floor(Math.random() * nameLng)];
+        //     var lastnameRnd = lastnames[Math.floor(Math.random() * lastnameLng)];
+        //     fullnames.push(nameRnd + ' ' + lastnameRnd);
+        // }
+
+        // console.log(fullnames);
+
+
+        // -------------------------------------------
+
+
+        // ES #2
+        // Crea due array che hanno un numero di elementi diversi. 
+        // Aggiungi elementi all'array che ha meno elementi fino a 
+        // quando ne avrà tanti quanti l'altro.
+        
+        var arr1 = [ 5 ];
+        var arr2 = [ 15, 2, 7 ];
+
+        var arr1Lng = arr1.length;
+        var arr2Lng = arr2.length;
+
+        console.log('Prima: ', 'Array 1: ' + arr1Lng, 'Array 2: ' + arr2Lng);
+
+        while (arr1Lng != arr2Lng) {
+            
+            if (arr1Lng > arr2Lng) {
+                
+                // arr2.push(prompt('Inserisci un nome'));
+
+                var elemRnd = Math.floor(Math.random() * 100) + 1;
+
+                arr2.push(elemRnd);
+                arr2Lng ++
+            } else {
+                
+                // arr1.push(prompt('Inserisci un nome'));
+
+                var elemRnd = Math.floor(Math.random() * 100) + 1;
+
+                arr1.push(elemRnd);
+                arr1Lng ++
+            }
         }
-
-        console.log(fullnames);
+        
+        console.log('Dopo: ', 'Array 1: ' + arr1Lng, 'Array 1: ' + arr2Lng);
     </script>
 </body>
 </html>
