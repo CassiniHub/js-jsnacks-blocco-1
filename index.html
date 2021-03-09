@@ -10,6 +10,13 @@
 </head>
 <body>
     
+    <div id="red" class="row">
+        
+    </div>
+    <div id="green" class="row">
+        
+    </div>
+
     <script>
 
         //ES #1
@@ -83,20 +90,45 @@
         // poi richiedere all'utente una serie di valori
         // finche' la somma non supera il valore limite
 
-        var limit = parseInt(prompt('Inserisci il valore limite:'));
-        var sum   = 0;
-        var allValue = []
+        // var limit = parseInt(prompt('Inserisci il valore limite:'));
+        // var sum   = 0;
+        // var allValue = []
 
-        console.log(limit);
+        // console.log(limit);
 
-        while (limit > sum) {
+        // while (limit > sum) {
             
-            var value = parseInt(prompt('Inserisci un numero:'));
-            allValue.push(value);
-            sum += value;
-        }
+        //     var value = parseInt(prompt('Inserisci un numero:'));
+        //     allValue.push(value);
+        //     sum += value;
+        // }
 
-        console.log('La somma finale è: ' + sum, '-', 'I valori inseriti dall\'utente sono: ' + allValue);
+        // console.log('La somma finale è: ' + sum, '-', 'I valori inseriti dall\'utente sono: ' + allValue);
+        
+
+        // -------------------------------------------
+
+        
+        // ES #4
+        // Crea due tag div con due id diversi. 
+        // Un div avrà il testo colorato di rosso mentre l'altro di verde. 
+        // Partendo da un array di numeri, stampiamo nell'id rosso i numeri 
+        // dispari e in verde i numeri pari.
+
+        var numbers  = [15, 20, 1, 3, 22];
+        var divRed   = document.getElementById("red");
+        var divGreen = document.getElementById("green");
+        
+        for (var i = 0; i < numbers.length; i++) {
+            
+            if (numbers[i] % 2 == 1) {
+                
+                divRed.innerHTML += numbers[i] + " ";
+            } else {
+                
+                divGreen.innerHTML += numbers[i] + " ";
+            }
+        }
     </script>
 </body>
 </html>
