@@ -43,36 +43,60 @@
         // Aggiungi elementi all'array che ha meno elementi fino a 
         // quando ne avrà tanti quanti l'altro.
         
-        var arr1 = [ 5 ];
-        var arr2 = [ 15, 2, 7 ];
+        // var arr1 = [ 5 ];
+        // var arr2 = [ 15, 2, 7 ];
 
-        var arr1Lng = arr1.length;
-        var arr2Lng = arr2.length;
+        // var arr1Lng = arr1.length;
+        // var arr2Lng = arr2.length;
 
-        console.log('Prima: ', 'Array 1: ' + arr1Lng, 'Array 2: ' + arr2Lng);
+        // console.log('Prima: ', 'Array 1: ' + arr1Lng, 'Array 2: ' + arr2Lng);
 
-        while (arr1Lng != arr2Lng) {
+        // while (arr1Lng != arr2Lng) {
             
-            if (arr1Lng > arr2Lng) {
+        //     if (arr1Lng > arr2Lng) {
                 
-                // arr2.push(prompt('Inserisci un nome'));
+        //         // arr2.push(prompt('Inserisci un nome'));
 
-                var elemRnd = Math.floor(Math.random() * 100) + 1;
+        //         var elemRnd = Math.floor(Math.random() * 100) + 1;
 
-                arr2.push(elemRnd);
-                arr2Lng ++
-            } else {
+        //         arr2.push(elemRnd);
+        //         arr2Lng ++
+        //     } else {
                 
-                // arr1.push(prompt('Inserisci un nome'));
+        //         // arr1.push(prompt('Inserisci un nome'));
 
-                var elemRnd = Math.floor(Math.random() * 100) + 1;
+        //         var elemRnd = Math.floor(Math.random() * 100) + 1;
 
-                arr1.push(elemRnd);
-                arr1Lng ++
-            }
-        }
+        //         arr1.push(elemRnd);
+        //         arr1Lng ++
+        //     }
+        // }
         
-        console.log('Dopo: ', 'Array 1: ' + arr1Lng, 'Array 1: ' + arr2Lng);
+        // console.log('Dopo: ', 'Array 1: ' + arr1Lng, 'Array 1: ' + arr2Lng);
+
+
+        // -------------------------------------------
+
+
+        // ES #3
+        // Chiedere all'utente un valore limite,
+        // poi richiedere all'utente una serie di valori
+        // finche' la somma non supera il valore limite
+
+        var limit = parseInt(prompt('Inserisci il valore limite:'));
+        var sum   = 0;
+        var allValue = []
+
+        console.log(limit);
+
+        while (limit > sum) {
+            
+            var value = parseInt(prompt('Inserisci un numero:'));
+            allValue.push(value);
+            sum += value;
+        }
+
+        console.log('La somma finale è: ' + sum, '-', 'I valori inseriti dall\'utente sono: ' + allValue);
     </script>
 </body>
 </html>
