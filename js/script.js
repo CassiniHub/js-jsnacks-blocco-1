@@ -37,6 +37,16 @@ function init() {
       var objStudent = students[i];
       console.log(objStudent['nome'] + ' ' + objStudent['cognome']);
   }
+
+  var userStudent = {
+     'nome': prompt('Inserisci il nome'),
+     'cognome': prompt('Inserisci il cognome'),
+     'eta': parseInt(prompt('Inserisci età'))
+  }
+
+  students.push(userStudent);
+
+  console.log(students);
 }
 
 $(document).ready(init);
