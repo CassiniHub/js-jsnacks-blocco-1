@@ -5,9 +5,9 @@
 // * - Creare un array di oggetti di studenti. Ciclare su tutti gli
 // * studenti e stampare per ognuno nome e cognome
 
-// - Dare la possibilità all'utente attraverso 3 prompt di
-// aggiungere un nuovo oggetto studente inserendo
-// nell'ordine: nome, cognome e età.
+// * - Dare la possibilità all'utente attraverso 3 prompt di
+// * aggiungere un nuovo oggetto studente inserendo
+// * nell'ordine: nome, cognome e età.
 
 function init() {
    
@@ -34,14 +34,14 @@ function init() {
 
   for (var i = 0; i < students.length; i++) {
      
-      var objStudent = students[i];
-      console.log(objStudent['nome'] + ' ' + objStudent['cognome']);
+      var student = students[i];
+      console.log(student['nome'] + ' ' + student['cognome']);
   }
 
   var userStudent = {
-     'nome': prompt('Inserisci il nome'),
+     'nome'   : prompt('Inserisci il nome'),
      'cognome': prompt('Inserisci il cognome'),
-     'eta': parseInt(prompt('Inserisci età'))
+     'eta'    : parseInt(prompt('Inserisci età'))
   }
 
   students.push(userStudent);
