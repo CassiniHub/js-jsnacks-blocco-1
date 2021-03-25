@@ -238,9 +238,22 @@ function init4() {
 
 function splitter(min, max, array) {
    
-   var sliced = array.slice(min, max + 1 );
+   console.log(array.length, max);
 
-   return sliced;
+   for (var i = 0; i < array.length; i++) {
+      
+      if (i < min) {
+
+         array.slice(i, 1);
+      } else if (i > max) {
+         
+         array.slice(i, 1);
+      }
+   }
+   console.log(array);
+   // var sliced = array.slice(min, max + 1 );
+
+   // return sliced;
 }
 
 function init5() {
