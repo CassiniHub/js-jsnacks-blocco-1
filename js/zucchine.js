@@ -232,4 +232,5 @@ function init4() {
    console.log(mergeArr);
 }
 
-$(document).ready(init4);
+// $(document).ready(init4);
+
