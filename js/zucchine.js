@@ -234,3 +234,29 @@ function init4() {
 
 // $(document).ready(init4);
 
+// -----------------------------
+
+function splitter(min, max, array) {
+   
+   var sliced = array.slice(min, max + 1 );
+
+   return sliced;
+}
+
+function init5() {
+   // Scrivi una funzione che accetti tre argomenti:
+   // un array e due numeri ("a" più piccolo di "b" e "b" grande al
+   // massimo quanto il numero di elementi dell'array).
+   // La funzione ritornerà un nuovo array con i valori che
+   // hanno la posizione compresa tra "a" e "b"
+
+    var arr      = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+    var indMin   = 3;
+    var indMax   = 7;
+    var splitted = splitter(indMin, indMax, arr);
+    // [ 4, 5, 6, 7, 8 ]
+
+    console.log(splitted);
+}
+
+$(document).ready(init5);
