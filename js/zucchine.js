@@ -240,14 +240,17 @@ function splitter(min, max, array) {
    
    console.log(array.length, max);
 
+   var shifted = 0;
+
    for (var i = 0; i < array.length; i++) {
       
       if (i < min) {
 
-         array.slice(i, 1);
-      } else if (i > max) {
-         
-         array.slice(i, 1);
+         array.shift();
+         shifted++;
+      } else if (i > max - shifted) {
+
+         array.pop();
       }
    }
    console.log(array);
