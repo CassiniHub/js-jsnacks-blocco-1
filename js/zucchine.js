@@ -238,22 +238,36 @@ function init4() {
 
 function splitter(min, max, array) {
    
-   console.log(array.length, max);
-
-   var shifted = 0;
-
    for (var i = 0; i < array.length; i++) {
-      
-      if (i < min) {
 
-         array.shift();
-         shifted++;
-      } else if (i > max - shifted) {
-
-         array.pop();
+      if (i < min || i > max) {
+         
+         delete array[i];
       }
    }
-   console.log(array);
+
+   var filtered = array.filter(Boolean);
+   console.log(filtered);
+
+   //VER 0.2
+   // console.log(array.length, max);
+
+   // var shifted = 0;
+
+   // for (var i = 0; i < array.length; i++) {
+      
+   //    if (i < min) {
+
+   //       array.shift();
+   //       shifted++;
+   //    } else if (i > max - shifted) {
+
+   //       array.pop();
+   //    }
+   // }
+   // console.log(array);
+
+   // VER 0.1
    // var sliced = array.slice(min, max + 1 );
 
    // return sliced;
